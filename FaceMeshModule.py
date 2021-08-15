@@ -40,7 +40,7 @@ def main():
     pTime = 0
     CTime = 0
     cap = cv2.VideoCapture(0)
-    cap.open('http://192.168.1.176:8080/video')
+    # cap.open('http://192.168.1.176:8080/video')
     detector = FaceMeshDetector()
     while cap.isOpened():
         success, img = cap.read()

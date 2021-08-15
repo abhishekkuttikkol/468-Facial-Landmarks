@@ -3,7 +3,7 @@ import mediapipe as mp
 import time
 
 cap = cv2.VideoCapture(0)
-cap.open('http://192.168.1.199:8080/video')
+# cap.open('http://192.168.1.244:8080/video')
 
 pTime = 0
 CTime = 0
@@ -26,10 +26,10 @@ while cap.isOpened():
                 x, y = int(lm.x*iw), int(lm.y*ih)
                 print(id, x, y)
 
-    CTime = time.time()
-    fps = 1/(CTime-pTime)
-    pTime = CTime
-    cv2.putText(img, f'{int(fps)}',(20,40),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),3)
+    # CTime = time.time()
+    # fps = 1/(CTime-pTime)
+    # pTime = CTime
+    # cv2.putText(img, f'{int(fps)}',(20,40),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),3)
     cv2.imshow("image", img)
     if cv2.waitKey(1) & 0xFF == 27:
         break
